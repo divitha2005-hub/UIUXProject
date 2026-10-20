@@ -1,0 +1,123 @@
+/* Desktop design is untouched above 1280px. Below that the layout relaxes. */
+@media (max-width: 1380px) {
+  .split { grid-template-columns: minmax(0, 1fr) 340px; }
+  .split.product { grid-template-columns: minmax(0, 1fr) 237px; }
+  .prod-info h1 { font-size: 34px; }
+  .split-side { padding-left: 20px; padding-right: 18px; }
+  .split-main { padding-left: 30px; }
+  .qa-grid { margin-left: 0; gap: 18px; }
+  .scan-grid { grid-template-columns: 300px minmax(0, 1fr); gap: 28px; }
+  .p-controls { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+  .features { padding-right: 0; }
+  .buy-row { padding-left: 40px; gap: 22px; }
+  .qlabel { margin-left: 0; }
+}
+
+@media (max-width: 1100px) {
+  .split, .split.product { grid-template-columns: minmax(0, 1fr); }
+  .product .split-side { padding: 28px 22px 24px; }
+  .market-body { grid-template-columns: minmax(0, 1fr); }
+  .market-side { border-left: 0; border-top: 1.5px solid var(--rule); padding: 22px 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); align-items: start; margin-right: 0; }
+  .market-wrap > .hero-banner { width: calc(100% - 16px); }
+  .market-wrap { padding-right: 16px; }
+  .grid { margin-left: 0; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+  .split-side { border-left: 0; border-top: 1.5px solid var(--rule); padding-top: 28px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; align-items: start; }
+  .product .split-side, .market .split-side { padding-top: 28px; }
+  .sprout { display: none; }
+  .res-top { grid-template-columns: 1fr; }
+  .res-img { width: 100%; max-width: 420px; height: auto; aspect-ratio: 330 / 239; }
+  .res-mid { grid-template-columns: 1fr; }
+  .p-cards { grid-template-columns: 1fr; }
+  .trk-grid { grid-template-columns: 1fr; }
+  .trk-bottom { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .soil-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 900px) {
+  .app { grid-template-columns: minmax(0, 1fr); }
+  .sidebar { position: fixed; left: 0; top: 0; bottom: 0; width: min(300px, 84vw); transform: translateX(-102%); transition: transform 0.25s; box-shadow: 0 0 40px #0006; }
+  .sidebar.open { transform: none; }
+  .brand { font-size: 30px; }
+  .scrim { display: block; position: fixed; inset: 0; background: #0007; z-index: 35; }
+  .icon-btn.hamburger { display: inline-flex; margin-right: 6px; }
+  .topbar { padding: 0 12px; height: 76px; gap: 4px; }
+  .searchwrap { flex: 1; max-width: none; min-width: 0; }
+  .search { height: 46px; gap: 10px; padding: 0 12px; }
+  .search input { font-size: 17px; }
+  .search svg { width: 24px; height: 24px; }
+  .loc { margin-left: 8px; font-size: 0; }
+  .loc svg { width: 32px; height: 38px; }
+  .user { margin-left: 4px; }
+  .who { display: none; }
+  .avatar { width: 40px; height: 40px; }
+  .split-main, .page-pad { padding-left: 16px; padding-right: 16px; }
+  .greet h1 { font-size: 26px; line-height: 32px; white-space: normal; }
+  .greet svg { width: 48px; height: 48px; }
+  .scan-grid { grid-template-columns: 1fr; padding-left: 0; }
+  .shortcuts { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; padding: 0; }
+  .shortcut { width: 100%; }
+  .scan-actions { margin-left: 0; grid-template-columns: 1fr 1fr; }
+  .cat-tabs { overflow-x: auto; }
+  .cat-tabs button { min-width: 110px; font-size: 18px; height: 46px; }
+  .filters { flex-wrap: wrap; gap: 10px; }
+  .msearch { max-width: none; flex-basis: 100%; }
+  .sel { flex: 1; }
+  .prod-top { grid-template-columns: 1fr; }
+  .product .prod-top, .product .features, .product .buy-row, .product .ptabs { margin-left: 0; }
+  .product .split-main { padding: 22px 16px 24px; }
+  .market-wrap { padding-left: 16px; }
+  .prod-info h1 { white-space: normal; }
+  .gallery { flex-direction: column-reverse; }
+  .thumbs { flex-direction: row; }
+  .mainimg { width: 100%; height: auto; aspect-ratio: 300 / 376; max-width: 360px; }
+  .features { grid-template-columns: 1fr; }
+  .buy-row { flex-wrap: wrap; height: auto; padding: 16px; }
+  .btn-place { width: 100%; margin: 0; }
+  .res-head, .trk-head { flex-direction: column; }
+  .res-title { font-size: 38px; }
+  .res-btns { flex-wrap: wrap; gap: 12px; margin-top: 0; }
+  .res-btns .btn-line, .res-btns .btn-solid { width: auto; flex: 1; min-width: 150px; font-size: 17px; height: 48px; }
+  .res-frame { padding: 14px; }
+  .detect-row { flex-direction: column; gap: 10px; }
+  .gauge-box { margin: 0; text-align: left; }
+  .warn { margin: 12px 0; font-size: 16px; }
+  .conf-row { grid-template-columns: 110px minmax(0, 1fr) 48px; font-size: 16px; }
+  .tab-body { font-size: 18px; padding: 16px 10px 0; line-height: 25px; }
+  .tabs button { font-size: 16px; }
+  .tabs-3 button, .res-tabs .tabs button { width: auto; }
+  .p-controls { grid-template-columns: 1fr 1fr; }
+  .pricing { padding-left: 16px; padding-right: 16px; }
+  .page-title { font-size: 30px; }
+  .page-sub.big { font-size: 17px; }
+  .trk-sub { font-size: 22px; }
+  .btn-dl { margin-top: 12px; width: 180px; height: 50px; font-size: 20px; }
+  .stepper { margin-left: 0; }
+  .stp .circle { width: 52px; height: 52px; }
+  .stp .circle svg { width: 28px; height: 28px; }
+  .stp .lbl { font-size: 12px; white-space: normal; text-align: center; max-width: 70px; }
+  .conn { top: 23px; left: calc(50% + 26px); right: calc(-50% + 26px); }
+  .od-row { grid-template-columns: 90px minmax(0, 1fr); }
+  .od-img { width: 90px; height: 72px; }
+  .od-total { grid-column: 1 / -1; align-items: flex-start; text-align: left; }
+  .od-info h3, .od-info p { font-size: 17px; line-height: 22px; }
+  .seller { flex-wrap: wrap; }
+  .vr { display: none; }
+  .olist li { flex-wrap: wrap; }
+  .trk-bottom { grid-template-columns: 1fr; }
+  .tracking { padding-left: 16px; }
+}
+
+@media (max-width: 520px) {
+  .grid { grid-template-columns: 1fr; }
+  .p-controls { grid-template-columns: 1fr; }
+  .weather dt { width: 130px; font-size: 20px; }
+  .weather dd { font-size: 20px; }
+  .temp { font-size: 30px; }
+  .split-side { grid-template-columns: 1fr; }
+  .soil-grid, .res-mid { gap: 16px; }
+  .sim-card { width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
